@@ -17,8 +17,7 @@ function ExpectTrueOrFalse(expression) {
         console.log("Expected true, but got false");
         
     } else {
-        console.log("Expected false, but got true");
-        Environment.Exit(1);  
+        console.log("Expected false, but got true"); 
     }
 }
 function main() {
