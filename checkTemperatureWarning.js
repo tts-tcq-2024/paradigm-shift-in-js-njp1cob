@@ -2,7 +2,7 @@
 const { temperature } = require('./checker');
 
 function temperatureWarning(temperature) {
-  console.log(temperature)
+  
   let warning = 
     temperature > 0 && temperature <= 2.5 ? "LOW_Temperature":
     temperature > 2.5 && temperature <= 42.75 ? "Normal":
