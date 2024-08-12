@@ -1,11 +1,20 @@
+const temperatureWarning = require('./checkTemperatureWarning');
+const socbreach = require('./checkSocBreach');
+const chargerateWarning = require('./checkchargeRateWarning');
+
+
+const temperature = 25;
+const soc = 20;
+const chargeRate = 0.7;
+
 function batteryIsOk(temperature,  soc,  chargeRate) {
-  console.log(
-    temperature < 0 || temperature > 45 ? "Temperature is out of range!" :
-    soc < 20 || soc > 80 ? "State of Charge is out of range!" :
-    chargeRate > 0.8 ? "Charge Rate is out of range!" :
-    "All parameters are within range."
-);
+    temperature =  temperature;
+    soc = soc;
+    chargeRate = chargeRate
     let value = ((temperature < 0 || temperature > 45) || (soc < 20 || soc > 80) || (chargeRate > 0.8)) ? false: true;
+    console.log(temperatureWarning(temperature)); 
+     console.log(socbreach(soc));
+     console.log(chargerateWarning(chargeRate));  
     return value;
 
 }
@@ -19,10 +28,14 @@ function ExpectTrueOrFalse(expression) {
     }
 }
 function main() {
-    ExpectTrueOrFalse(batteryIsOk(25, 70, 0.7));
+    
     ExpectTrueOrFalse(batteryIsOk(50, 85, 0.0));
-    console.log("All ok");
-    return 0;
+    ExpectTrueOrFalse(batteryIsOk(25, 70, 0.7));
+   
 }
 
 main();
+module.exports = {
+    temperature,
+    soc, chargeRate
+};
