@@ -1,12 +1,12 @@
 
-const { value } = require('./checker');
+const { temperature } = require('./checker');
 
-function socbreach(value) {
+function socbreach(temperature) {
   let warning = 
-    value > 0 && value <= 20 ? "LOW_SOC_Breach":
-    value > 20 && value <= 24 ? "Approaching discharge":
-    value > 24 && value <= 76 ? "Normal":
-    value > 76 && value <= 80 ? "Approaching charge peak"
-    value > 80 ? "SOC is out of range!": "Invalid values";
+    temperature > 0 && value <= 20 ? "LOW_SOC_Breach":
+    temperature > 20 && value <= 24 ? "Approaching discharge":
+    temperature > 24 && value <= 76 ? "Normal":
+    temperature > 76 && value <= 80 ? "Approaching charge peak"
+    temperature > 80 ? "SOC is out of range!": "Invalid values";
   return warning;
 }
