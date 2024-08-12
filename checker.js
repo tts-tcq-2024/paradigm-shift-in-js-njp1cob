@@ -3,9 +3,9 @@ const { socbreach } = require('./checkSocBreach');
 const { chargerateWarning } = require('./checkchargeRateWarning');
 
 
-const temperature;
-const soc;
-const chargeRate;
+const temperature = 25;
+const soc = 20;
+const chargeRate = 0.7;
 
 function batteryIsOk(temperature,  soc,  chargeRate) {
     temperature =  temperature;
