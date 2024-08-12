@@ -1,5 +1,5 @@
-const socbreach = require('./checkTemperatureWarning');
-const temperatureWarning = require('./checkSocBreach');
+const temperatureWarning = require('./checkTemperatureWarning');
+const socbreach = require('./checkSocBreach');
 const chargerateWarning = require('./checkchargeRateWarning');
 
 
@@ -13,8 +13,8 @@ function batteryIsOk(temperature,  soc,  chargeRate) {
     chargeRate = chargeRate
     let value = ((temperature < 0 || temperature > 45) || (soc < 20 || soc > 80) || (chargeRate > 0.8)) ? false: true;
     console.log(temperatureWarning(temperature)); 
-     // console.log(socbreach(soc));
-     // console.log(chargerateWarning(chargeRate));  
+     console.log(socbreach(soc));
+     console.log(chargerateWarning(chargeRate));  
     return value;
 
 }
