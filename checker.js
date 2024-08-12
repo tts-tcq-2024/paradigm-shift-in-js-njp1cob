@@ -1,6 +1,6 @@
-const { temperatureWarning } = require('./checkTemperatureWarning');
-const { socbreach } = require('./checkSocBreach');
-const { chargerateWarning } = require('./checkchargeRateWarning');
+const socbreach = require('./checkTemperatureWarning');
+const temperatureWarning = require('./checkSocBreach');
+const chargerateWarning = require('./checkchargeRateWarning');
 
 
 const temperature = 25;
