@@ -28,7 +28,7 @@ function batteryIsOk(temperature,  soc,  chargeRate) {
 //     }
 // }
 function main() {
-    batteryIsOk(25, 70, 0.7);
+    batteryIsOk(50, 85, 0.0);
     // ExpectTrueOrFalse(batteryIsOk(25, 70, 0.7));
     // ExpectTrueOrFalse(batteryIsOk(50, 85, 0.0));
    
