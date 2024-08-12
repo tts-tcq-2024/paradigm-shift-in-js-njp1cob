@@ -9,3 +9,4 @@ function temperatureWarning(temperature) {
     temperature > 45 ? "Temperature is out of range": "Invalid values";
   return warning;
 }
+module.exports = temperatureWarning;
