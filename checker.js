@@ -12,7 +12,7 @@ function batteryIsOk(temperature,  soc,  chargeRate) {
     soc = soc;
     chargeRate = chargeRate
     let value = ((temperature < 0 || temperature > 45) || (soc < 20 || soc > 80) || (chargeRate > 0.8)) ? false: true;
-   console.log(temperatureWarning(temperature);) 
+   console.log(temperatureWarning(temperature)); 
      console.log(socbreach(soc));
      console.log(chargerateWarning(chargeRate));  
     return value;
