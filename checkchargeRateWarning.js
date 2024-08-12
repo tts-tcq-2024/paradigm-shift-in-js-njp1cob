@@ -7,3 +7,4 @@ function chargerateWarning(chargeRate) {
     chargeRate > 0.8 ? "Charge Rate is out of range!": "Invalid values";
   return warning;
 }
+module.exports = chargerateWarning;
