@@ -10,3 +10,4 @@ function socbreach(soc) {
     soc > 80 ? "SOC is out of range!": "Invalid values";
   return warning;
 }
+module.exports = socbreach;
