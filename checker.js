@@ -12,6 +12,9 @@ function batteryIsOk(temperature,  soc,  chargeRate) {
     soc = soc;
     chargeRate = chargeRate
     let value = ((temperature < 0 || temperature > 45) || (soc < 20 || soc > 80) || (chargeRate > 0.8)) ? false: true;
+    temperatureWarning(value);
+    socbreach(value);
+    chargerateWarning(value);  
     return value;
 
 }
@@ -27,9 +30,7 @@ function ExpectTrueOrFalse(expression) {
 function main() {
     ExpectTrueOrFalse(batteryIsOk(25, 70, 0.7));
     ExpectTrueOrFalse(batteryIsOk(50, 85, 0.0));
-    temperatureWarning(value);
-    socbreach(value);
-    chargerateWarning(value);  
+   
 }
 
 main();
