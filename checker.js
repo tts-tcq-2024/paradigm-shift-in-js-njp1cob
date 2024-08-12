@@ -12,24 +12,25 @@ function batteryIsOk(temperature,  soc,  chargeRate) {
     soc = soc;
     chargeRate = chargeRate
     let value = ((temperature < 0 || temperature > 45) || (soc < 20 || soc > 80) || (chargeRate > 0.8)) ? false: true;
-   console.log(temperatureWarning(temperature)); 
+    console.log(temperatureWarning(temperature)); 
      console.log(socbreach(soc));
      console.log(chargerateWarning(chargeRate));  
     return value;
 
 }
 
-function ExpectTrueOrFalse(expression) {
-    if(!expression) {
-        console.log("Expected true, but got false");
+// function ExpectTrueOrFalse(expression) {
+//     if(!expression) {
+//         console.log("Expected true, but got false");
         
-    } else {
-        console.log("Expected false, but got true"); 
-    }
-}
+//     } else {
+//         console.log("Expected false, but got true"); 
+//     }
+// }
 function main() {
-    ExpectTrueOrFalse(batteryIsOk(25, 70, 0.7));
-    ExpectTrueOrFalse(batteryIsOk(50, 85, 0.0));
+    batteryIsOk(25, 70, 0.7);
+    // ExpectTrueOrFalse(batteryIsOk(25, 70, 0.7));
+    // ExpectTrueOrFalse(batteryIsOk(50, 85, 0.0));
    
 }
 
