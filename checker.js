@@ -19,18 +19,17 @@ function batteryIsOk(temperature,  soc,  chargeRate) {
 
 }
 
-// function ExpectTrueOrFalse(expression) {
-//     if(!expression) {
-//         console.log("Expected true, but got false");
+function ExpectTrueOrFalse(expression) {
+    if(!expression) {
+        console.log("Expected true, but got false");
         
-//     } else {
-//         console.log("Expected false, but got true"); 
-//     }
-// }
+    } else {
+        console.log("Expected false, but got true"); 
+    }
+}
 function main() {
-    batteryIsOk(50, 85, 0.0);
-    // ExpectTrueOrFalse(batteryIsOk(25, 70, 0.7));
-    // ExpectTrueOrFalse(batteryIsOk(50, 85, 0.0));
+    ExpectTrueOrFalse(batteryIsOk(25, 70, 0.7));
+    ExpectTrueOrFalse(batteryIsOk(50, 85, 0.0));
    
 }
 
