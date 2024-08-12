@@ -28,8 +28,9 @@ function ExpectTrueOrFalse(expression) {
     }
 }
 function main() {
-    // ExpectTrueOrFalse(batteryIsOk(25, 70, 0.7));
+    
     ExpectTrueOrFalse(batteryIsOk(50, 85, 0.0));
+    ExpectTrueOrFalse(batteryIsOk(25, 70, 0.7));
    
 }
 
